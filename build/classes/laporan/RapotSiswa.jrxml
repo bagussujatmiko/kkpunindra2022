@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     nilai_siswa.`kd_nilai_mapel` AS nilai_siswa_kd_nilai_mapel,
+     nilai_siswa.`status_siswa` AS nilai_siswa_status_siswa,
+     nilai_siswa.`nik` AS nilai_siswa_nik,
+     nilai_siswa.`nama_siswa` AS nilai_siswa_nama_siswa,
+     nilai_siswa.`Kelas` AS nilai_siswa_Kelas,
+     nilai_siswa.`semester` AS nilai_siswa_semester,
+     nilai_siswa.`tahun_ajaran` AS nilai_siswa_tahun_ajaran,
+     nilai_siswa.`mapel` AS nilai_siswa_mapel,
+     nilai_siswa.`n_perkembangan` AS nilai_siswa_n_perkembangan,
+     absen_siswa.`kd_absen` AS absen_siswa_kd_absen,
+     absen_siswa.`id_status` AS absen_siswa_id_status,
+     absen_siswa.`nik` AS absen_siswa_nik,
+     absen_siswa.`nama_siswa` AS absen_siswa_nama_siswa,
+     absen_siswa.`sakit` AS absen_siswa_sakit,
+     absen_siswa.`izin` AS absen_siswa_izin,
+     absen_siswa.`alpha` AS absen_siswa_alpha,
+     akhlak_siswa.`kd_akhlak` AS akhlak_siswa_kd_akhlak,
+     akhlak_siswa.`id_status` AS akhlak_siswa_id_status,
+     akhlak_siswa.`nik` AS akhlak_siswa_nik,
+     akhlak_siswa.`nama_siswa` AS akhlak_siswa_nama_siswa,
+     akhlak_siswa.`percaya_diri` AS akhlak_siswa_percaya_diri,
+     akhlak_siswa.`t_jawab` AS akhlak_siswa_t_jawab,
+     akhlak_siswa.`mandiri` AS akhlak_siswa_mandiri,
+     akhlak_siswa.`disiplin` AS akhlak_siswa_disiplin,
+     akhlak_siswa.`catatan` AS akhlak_siswa_catatan,
+     mapel.`kd_mapel` AS mapel_kd_mapel,
+     mapel.`nama_mapel` AS mapel_nama_mapel,
+     mapel.`kelas` AS mapel_kelas,
+     mapel.`nip` AS mapel_nip,
+     mapel.`wali_kelas` AS mapel_wali_kelas
+FROM
+     `nilai_siswa` nilai_siswa,
+     `absen_siswa` absen_siswa,
+     `akhlak_siswa` akhlak_siswa,
+     `mapel` mapel]]>
+	</queryString>
+	<field name="nilai_siswa_kd_nilai_mapel" class="java.lang.String"/>
+	<field name="nilai_siswa_status_siswa" class="java.lang.String"/>
+	<field name="nilai_siswa_nik" class="java.lang.String"/>
+	<field name="nilai_siswa_nama_siswa" class="java.lang.String"/>
+	<field name="nilai_siswa_Kelas" class="java.lang.String"/>
+	<field name="nilai_siswa_semester" class="java.lang.String"/>
+	<field name="nilai_siswa_tahun_ajaran" class="java.lang.String"/>
+	<field name="nilai_siswa_mapel" class="java.lang.String"/>
+	<field name="nilai_siswa_n_perkembangan" class="java.lang.String"/>
+	<field name="absen_siswa_kd_absen" class="java.lang.String"/>
+	<field name="absen_siswa_id_status" class="java.lang.String"/>
+	<field name="absen_siswa_nik" class="java.lang.String"/>
+	<field name="absen_siswa_nama_siswa" class="java.lang.String"/>
+	<field name="absen_siswa_sakit" class="java.lang.Integer"/>
+	<field name="absen_siswa_izin" class="java.lang.Integer"/>
+	<field name="absen_siswa_alpha" class="java.lang.Integer"/>
+	<field name="akhlak_siswa_kd_akhlak" class="java.lang.String"/>
+	<field name="akhlak_siswa_id_status" class="java.lang.String"/>
+	<field name="akhlak_siswa_nik" class="java.lang.String"/>
+	<field name="akhlak_siswa_nama_siswa" class="java.lang.String"/>
+	<field name="akhlak_siswa_percaya_diri" class="java.lang.String"/>
+	<field name="akhlak_siswa_t_jawab" class="java.lang.String"/>
+	<field name="akhlak_siswa_mandiri" class="java.lang.String"/>
+	<field name="akhlak_siswa_disiplin" class="java.lang.String"/>
+	<field name="akhlak_siswa_catatan" class="java.lang.String"/>
+	<field name="mapel_kd_mapel" class="java.lang.String"/>
+	<field name="mapel_nama_mapel" class="java.lang.String"/>
+	<field name="mapel_kelas" class="java.lang.String"/>
+	<field name="mapel_nip" class="java.lang.String"/>
+	<field name="mapel_wali_kelas" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<image>
+				<reportElement x="17" y="0" width="137" height="79"/>
+				<imageExpression><![CDATA["C:\\Users\\miko\\Documents\\NetBeansProjects\\APP_SPP\\src\\img\\logoSekolah.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="170" y="0" width="219" height="46"/>
+				<textElement>
+					<font size="30"/>
+				</textElement>
+				<text><![CDATA[RAPOT SISWA ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="189" y="46" width="182" height="27"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[RA NURUL RAHMAN]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="164" splitType="Stretch">
+			<textField>
+				<reportElement x="138" y="18" width="100" height="20"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nilai_siswa_nik}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="138" y="38" width="173" height="20"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nilai_siswa_nama_siswa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="138" y="58" width="173" height="20"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nilai_siswa_Kelas}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="138" y="78" width="173" height="20"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nilai_siswa_semester}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="138" y="98" width="173" height="20"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nilai_siswa_tahun_ajaran}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="18" width="100" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Nik Siswa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="38" width="100" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Nama Siswa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="58" width="100" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Kelas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="78" width="100" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Semester]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="98" width="100" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Tahun ajaran]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="144" width="138" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Kode Mata Pelajaran]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="163" y="144" width="138" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Nama Mata Pelajaran]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="371" y="144" width="138" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Nilai Mata Pelajaran]]></text>
+			</staticText>
+			<line>
+				<reportElement x="17" y="0" width="520" height="1"/>
+			</line>
+			<staticText>
+				<reportElement x="100" y="18" width="22" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="38" width="22" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="58" width="22" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="78" width="22" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="98" width="22" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="251" splitType="Stretch">
+			<textField>
+				<reportElement x="17" y="0" width="100" height="20"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mapel_kd_mapel}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="170" y="0" width="131" height="20"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mapel_nama_mapel}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="371" y="0" width="166" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nilai_siswa_n_perkembangan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="154" y="84" width="147" height="20"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{akhlak_siswa_percaya_diri}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="154" y="104" width="147" height="20"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{akhlak_siswa_mandiri}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="154" y="124" width="147" height="20"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{akhlak_siswa_disiplin}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="154" y="186" width="100" height="20"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{absen_siswa_izin}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="154" y="206" width="122" height="20"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{absen_siswa_sakit}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="154" y="226" width="122" height="20"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{absen_siswa_alpha}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="16" y="52" width="138" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Nilai Kepribadian]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="84" width="116" height="20"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Percaya Diri]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="104" width="116" height="20"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Mandiri]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="124" width="116" height="20"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Disiplin]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="16" y="155" width="138" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Absen Siswa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="186" width="116" height="20"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Izin]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="206" width="116" height="20"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Sakit]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="226" width="117" height="20"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[alpha]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="116" y="84" width="22" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="117" y="104" width="22" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="117" y="124" width="22" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="117" y="186" width="22" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="117" y="206" width="22" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="116" y="226" width="22" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="75" splitType="Stretch">
+			<line>
+				<reportElement x="431" y="74" width="106" height="1"/>
+			</line>
+			<staticText>
+				<reportElement x="417" y="0" width="138" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Wali Kelas]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField>
+				<reportElement x="430" y="0" width="125" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mapel_wali_kelas}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="455" y="20" width="100" height="20"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mapel_nip}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="417" y="20" width="50" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Nip]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
