@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     *,
+     tabel_guru.`nip` AS tabel_guru_nip,
+     tabel_guru.`nama_guru` AS tabel_guru_nama_guru,
+     tabel_guru.`temp_lahir` AS tabel_guru_temp_lahir,
+     tabel_guru.`tanggal_lahir` AS tabel_guru_tanggal_lahir,
+     tabel_guru.`j_kelamin` AS tabel_guru_j_kelamin,
+     tabel_guru.`jabatan` AS tabel_guru_jabatan,
+     tabel_guru.`alamat` AS tabel_guru_alamat,
+     tabel_guru.`telephone` AS tabel_guru_telephone
+FROM
+     `tabel_guru` tabel_guru]]>
+	</queryString>
+	<field name="telephone" class="java.lang.String"/>
+	<field name="alamat" class="java.lang.String"/>
+	<field name="jabatan" class="java.lang.String"/>
+	<field name="j_kelamin" class="java.lang.String"/>
+	<field name="temp_lahir" class="java.lang.String"/>
+	<field name="nip" class="java.lang.String"/>
+	<field name="nama_guru" class="java.lang.String"/>
+	<field name="tanggal_lahir" class="java.sql.Date"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="130" y="0" width="289" height="66"/>
+				<textElement>
+					<font size="48"/>
+				</textElement>
+				<text><![CDATA[DATA GURU]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="153" y="0" width="238" height="35"/>
+				<textElement>
+					<font size="24"/>
+				</textElement>
+				<text><![CDATA[RA NURUL RAHMAN]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="41" width="49" height="20"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="41" width="49" height="20"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[nip]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="49" y="41" width="69" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="118" y="41" width="81" height="20"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="49" y="41" width="69" height="20"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[nama guru]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="118" y="41" width="81" height="20"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[ jenis kelamin]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="199" y="41" width="75" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="274" y="41" width="84" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="358" y="41" width="56" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="414" y="41" width="66" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="480" y="41" width="75" height="20"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="199" y="41" width="75" height="20"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Tempat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="274" y="41" width="84" height="20"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[tanggal_lahir]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="358" y="41" width="56" height="20"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[jabatan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="414" y="41" width="66" height="20"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[alamat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="480" y="41" width="75" height="20"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[telephone]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="49" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="49" y="0" width="69" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="118" y="0" width="81" height="20"/>
+			</rectangle>
+			<textField>
+				<reportElement x="0" y="0" width="49" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{nip}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="49" y="0" width="69" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{nama_guru}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="118" y="0" width="81" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{j_kelamin}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="199" y="0" width="75" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="274" y="0" width="84" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="358" y="0" width="56" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="414" y="0" width="66" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="480" y="0" width="75" height="20"/>
+			</rectangle>
+			<textField>
+				<reportElement x="199" y="0" width="75" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{temp_lahir}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="274" y="0" width="84" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{tanggal_lahir}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="358" y="0" width="56" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{jabatan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="414" y="0" width="66" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{alamat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="480" y="0" width="75" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{telephone}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
